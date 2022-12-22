@@ -114,7 +114,6 @@ columns = 3
 cria_matriz(3, 3)
 
 print_matriz(matriz)
-print(matriz)
 
 insere_celula_viva(matriz, 1, 1)
 insere_celula_viva(matriz, 1, 2)
