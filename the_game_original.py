@@ -1,3 +1,5 @@
+import time
+
 def print_matriz(array):
     print('-' * 20)
     for el in array:
@@ -87,7 +89,6 @@ def roda_o_game(matriz):
         for j in range(0, columns):
             el = matriz[i][j]
             n_vizinhos = contador_de_vizinhos(i, j)
-
             if n_vizinhos <= 1 or n_vizinhos >= 4:
                 if el == '#':
                     posicoes_para_inverter.append([i, j])
@@ -95,7 +96,6 @@ def roda_o_game(matriz):
                 if n_vizinhos == 3 and el == 0:
                     posicoes_para_inverter.append([i, j])
 
-    print_matriz(matriz)
     inverter_caractere(posicoes_para_inverter)
     print_matriz(matriz)
 
@@ -122,6 +122,10 @@ insere_celula_viva(matriz, 2, 1)
 insere_celula_viva(matriz, 2, 2)
 insere_celula_viva(matriz, 2, 3)
 
+print('\n ------ INICIEI -----')
+print_matriz(matriz)
 
-roda_o_game(matriz)
+while True:
+    roda_o_game(matriz)
+    time.sleep(2)
 

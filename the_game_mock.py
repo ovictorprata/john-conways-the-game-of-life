@@ -18,8 +18,6 @@ def continuar_o_jogo(continuar, pos_linha=0, pos_coluna=0):
     while continuar == 's':
         print('-' * 20)
         if continuar == 's':
-            # pos_row = int(input('Insira a posição da linha: '))
-            # pos_column = int(input('Insira a posição da coluna: '))
             print('-' * 20)
             insere_celula_viva(matriz, pos_linha, pos_coluna)
 
@@ -89,7 +87,6 @@ def roda_o_game(matriz):
         for j in range(0, columns):
             el = matriz[i][j]
             n_vizinhos = contador_de_vizinhos(i, j)
-            print(n_vizinhos)
             if n_vizinhos <= 1 or n_vizinhos >= 4:
                 if el == '#':
                     posicoes_para_inverter.append([i, j])
@@ -123,7 +120,7 @@ insere_celula_viva(matriz, 2, 1)
 insere_celula_viva(matriz, 2, 2)
 insere_celula_viva(matriz, 2, 3)
 
-print('\n ------ INICIEI ------')
+print('----- INICIEI ------')
 print_matriz(matriz)
 repetidor = 'ligado'
 
