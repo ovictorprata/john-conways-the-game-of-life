@@ -19,7 +19,7 @@ def continuar_o_jogo(continuar, pos_linha=0, pos_coluna=0):
         print('-' * 20)
         if continuar == 's':
             print('-' * 20)
-            insere_celula_viva(matriz,  pos_linha, pos_coluna)
+            insere_celula_viva(matriz, pos_linha, pos_coluna)
 
         elif continuar == 'n':
             roda_o_game()
@@ -39,7 +39,7 @@ def zera_index_negativo(index):
         index = 0
     return index
 
-def contador_de_vizinhos(matriz,  i, j):
+def contador_de_vizinhos(matriz, i, j):
     n_vizinhos = 0
     variacao_indices = [
         (-1, -1), (-1, 0),(-1, 1),
@@ -75,7 +75,7 @@ def roda_o_game(matriz):
     for i in range(0, rows):
         for j in range(0, columns):
             el = matriz[i][j]
-            n_vizinhos = contador_de_vizinhos(matriz,  i, j)
+            n_vizinhos = contador_de_vizinhos(matriz, i, j)
             if n_vizinhos <= 1 or n_vizinhos >= 4:
                 if el == celula_viva:
                     posicoes_para_inverter.append([i, j])
@@ -92,68 +92,27 @@ matriz_teste = []
 linha = []
 n_vizinhos = 0
 
-rows = 15
-columns = 15
-
+rows = int(input('Insira o número de linhas da tabuleiro: '))
+columns = int(input('Insira o número de colunas da tabuleiro: '))
 cria_matriz(rows, columns)
-print('-'  * 20)
 
-print('- MATRIZ INICIAL -')
+print('-'  * 20)
+print('- SEU TABULEIRO INICIAL É: ')
 print_matriz(matriz)
-print('- FIM MATRIZ INICIAL -') 
+print('- FIM TABULEIRO INICIAL -') 
 print('-'  * 20)
 
-insere_celula_viva(matriz, 2, 4)
-insere_celula_viva(matriz, 2, 5)
-insere_celula_viva(matriz, 2, 6)
-insere_celula_viva(matriz, 2, 10)
-insere_celula_viva(matriz, 2, 11)
-insere_celula_viva(matriz, 2, 12)
-insere_celula_viva(matriz, 4, 2)
-insere_celula_viva(matriz, 4, 7)
-insere_celula_viva(matriz, 4, 9)
-insere_celula_viva(matriz, 4, 14)
-insere_celula_viva(matriz, 1+4, 2)
-insere_celula_viva(matriz, 1+4, 7)
-insere_celula_viva(matriz, 1+4, 9)
-insere_celula_viva(matriz, 1+4, 14)
-insere_celula_viva(matriz, 1+5, 2)
-insere_celula_viva(matriz, 1+5, 7)
-insere_celula_viva(matriz, 1+5, 9)
-insere_celula_viva(matriz, 1+5, 14)
-insere_celula_viva(matriz, 1+6, 4)
-insere_celula_viva(matriz, 1+6, 5)
-insere_celula_viva(matriz, 1+6, 6)
-insere_celula_viva(matriz, 1+6, 10)
-insere_celula_viva(matriz, 1+6, 11)
-insere_celula_viva(matriz, 1+6, 12)
+continuar = 's'
 
-insere_celula_viva(matriz, 1+8, 4)
-insere_celula_viva(matriz, 1+8, 5)
-insere_celula_viva(matriz, 1+8, 6)
-insere_celula_viva(matriz, 1+8, 10)
-insere_celula_viva(matriz, 1+8, 11)
-insere_celula_viva(matriz, 1+8, 12)
+while continuar != 'n':
+    continuar = input('Deseja inserir uma célula viva? [s/n]').lower()
+    if continuar == 'n':
+        break
+    insere_i = int(input('Insira a posição da linha onde deseja inserir: '))
+    insere_j = int(input('Insira a posição da coluna onde deseja inserir: '))
+    insere_celula_viva(matriz, insere_i, insere_j)
+    print_matriz(matriz)
 
-insere_celula_viva(matriz, 10, 2)
-insere_celula_viva(matriz, 10, 7)
-insere_celula_viva(matriz, 10, 9)
-insere_celula_viva(matriz, 10, 14)
-insere_celula_viva(matriz, 11, 2)
-insere_celula_viva(matriz, 11, 7)
-insere_celula_viva(matriz, 11, 9)
-insere_celula_viva(matriz, 11, 14)
-insere_celula_viva(matriz, 12, 2)
-insere_celula_viva(matriz, 12, 7)
-insere_celula_viva(matriz, 12, 9)
-insere_celula_viva(matriz, 12, 14)
-
-insere_celula_viva(matriz, 14, 4)
-insere_celula_viva(matriz, 14, 5)
-insere_celula_viva(matriz, 14, 6)
-insere_celula_viva(matriz, 14, 10)
-insere_celula_viva(matriz, 14, 11)
-insere_celula_viva(matriz, 14, 12)
 
 print('----- INICIEI ------')
 print_matriz(matriz)
@@ -164,5 +123,5 @@ while True:
     print(f'\n{numero}ª vez:')
     roda_o_game(matriz)
     print_matriz(matriz)
-    time.sleep(1)
+    time.sleep(.5)
 
