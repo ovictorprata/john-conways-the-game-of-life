@@ -9,5 +9,5 @@
 # Demonstração em Python (via terminal):
 ![image](https://user-images.githubusercontent.com/103593286/211065434-ac0e414e-3bf2-474e-8077-ac15e4484cd8.png) ![image](https://user-images.githubusercontent.com/103593286/211065460-ba7c4124-8521-4355-9f78-f40d1169ee0a.png) ![image](https://user-images.githubusercontent.com/103593286/211065521-5db54c44-efe6-44cd-86f3-ff42b563fab4.png)
 
-# Versão vue [neste link](https://ovictorprata.github.io/john-conways-the-game-of-life/)
+# Versão vue: [neste link](https://ovictorprata.github.io/john-conways-the-game-of-life/)
 
