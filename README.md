@@ -17,10 +17,10 @@ Para rodar o projeto, rode os seguintes comandos: (utilizei o python 3.9.16)
 `pip install -r requirements.txt`
 
 **MOCK:**
-`the_game_mock.py`
+`python3 the_game_mock.py`
 
 **COM INPUTS:**
-`the_game_inputs.py`
+`python3 the_game_inputs.py`
 
 ## VueJS setup
 
