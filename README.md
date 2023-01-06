@@ -16,7 +16,13 @@ Para rodar o projeto, rode os seguintes comandos: (utilizei o python 3.9.16)
 
 `pip install -r requirements.txt`
 
-`python3 automatos_celulares2.py`
+MOCK:
+
+`the_game_mock.py`
+
+COM INPUTS:
+
+`the_game_inputs.py`
 
 ## VueJS setup
 
