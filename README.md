@@ -1,24 +1,7 @@
-# jogo
+# Conway's Game Copy
 
-## Project setup
-```
-npm install
-```
+- Este repositório contém as minhas versões em Python e em Vue.js do jogo da vida do Conway. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Existem duas versões do jogo: a mock (em Vue e Python) que não apresenta nenhuma interatividade com o usuário e a normal (apenas em Python) que é interativa. 
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Fique a vontade de escolher qual versão você deseja :) 
